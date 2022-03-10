@@ -29,13 +29,13 @@ function playerPlay(){
         console.log(`La opcion elegida es ${option}`);
         computerPlay();
     }else{
-        console.log('Error. Indicar las opciones seleccionadas')
+        console.log('Error. Ingresar PIEDRA, PAPEL, o TIJERA')
         return playerPlay();
         
     }
 }
 
-function juego(){
+function jugar(){
     var final=0
     for (i=1;i<=5;i++){
         playerPlay();
