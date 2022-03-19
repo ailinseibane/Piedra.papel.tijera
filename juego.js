@@ -1,62 +1,100 @@
+
+const div=document.querySelector('.div');
+console.log(div);
+
+const btn1=document.createElement('button');
+btn1.setAttribute('id','btn1')
+btn1.classList.add('btn');
+btn1.textContent='Piedra'
+div.appendChild(btn1);
+
+const btn2=document.createElement('button');
+btn2.setAttribute('id','btn2')
+btn2.classList.add('btn');
+btn2.textContent='Papel'
+div.appendChild(btn2);
+
+const btn3=document.createElement('button');
+btn3.setAttribute('id','btn3')
+btn3.classList.add('btn');
+btn3.textContent='Tijera'
+div.appendChild(btn3);
+
+btn1.addEventListener('click',click);
+btn2.addEventListener('click',click);
+btn3.addEventListener('click',click);
+
+const msg=document.createElement('div');
+msg.setAttribute('id','msg1');
+div.appendChild(msg);
+msg.textContent=('')
+
+const msg2=document.createElement('div');
+msg2.setAttribute('id','msg2');
+div.appendChild(msg2);
+msg2.textContent=('')
+
+const msg3=document.createElement('h2');
+msg3.setAttribute('id','msg3');
+div.appendChild(msg3);
+msg3.textContent=('')
+
+const msg4=document.querySelector('#msg4');
+msg4.textContent=('')
+
+final=0
+function click(e){
+    if(e.target.id==='btn1'){
+        player='a'
+        msg.textContent=('Usted ha elegido la opción PIEDRA')
+        
+    }else if (e.target.id==='btn2'){
+        player='b'
+        msg.textContent=('Usted ha elegido la opción PAPEL')
+        
+    }else if (e.target.id==='btn3'){
+        player='c'
+        msg.textContent=('Usted ha elegido la opción TIJERA')
+        
+    }else{}
+
+    computer=computerPlay();
+
+    if (computer===player){
+        var result=0;
+        msg3.textContent=(`Empate`);
+    }else if ((computer==='a' && player=='b') ||(computer==='b' && player=='c') || (computer==='c' && player=='a')){
+        var result=1;
+        msg3.textContent=(`Gana Jugador`);
+    }else{
+        var result=-1;
+        msg3.textContent=(`Gana computadora`);
+    }
+    final=final +result;
+    msg4.textContent=(`Puntaje final: ${final}`);
+
+    
+}
+
 function computerPlay(){
     var n=Math.random()
     if (n <(1/3)){
         var computer= 'a';       //'Piedra'
-        console.log( 'Computadora elige Piedra');
+        msg2.textContent=('Computadora ha elegido la opción PIEDRA')
+        
+        return computer
     }else if (n>=(1/3) && n<(2/3)){
         var computer = 'b';      //'Papel'
-        console.log( 'Computadora elige Papel');
+        msg2.textContent=('Computadora ha elegido la opción PAPEL')
+        
+        return computer
     }else{
         var computer= 'c';       //'Tijera'
-        console.log( 'Computadora elige Tijera');
+        msg2.textContent=('Computadora ha elegido la opción TIJERA')
+        
+        return computer
     }
 }
 
-function playerPlay(){
-    var option= prompt('Ingrese opcion');
-        
-    if (option.toUpperCase()=='PIEDRA'){
-        var player='a';
-        console.log(`La opcion elegida es ${option}`); 
-        computerPlay();
-        
-    }else if(option.toUpperCase()=='PAPEL'){
-        var player='b';
-        console.log(`La opcion elegida es ${option}`);
-        computerPlay();
-    }else if(option.toUpperCase()=='TIJERA'){
-        var player='c';
-        console.log(`La opcion elegida es ${option}`);
-        computerPlay();
-    }else{
-        console.log('Error. Ingresar PIEDRA, PAPEL, o TIJERA');
-        return playerPlay();
-        
-    }
-}
 
-function jugar(){
-    var final=0;
-    for (i=1;i<=5;i++){
-        playerPlay();
-        if (computer===player){
-            var result=0;
-            console.log (`Juego ${i}.Empate`);
-        }else if ((computer==='a' && player=='b') ||(computer==='b' && player=='c') || (computer==='c' && player=='a')){
-            var result=1;
-            console.log (`Juego ${i}.Gana Jugador`);
-        }else{
-            var result=-1;
-            console.log (`Juego ${i}.Gana computadora`);
-        }
-        final=final +result;
-    }
-    
-    if (final>0){
-        return `Puntaje final ${final}. Gana Jugador!!!`;
-    }else if(final===0){
-        return `Puntaje final ${final}. Empate`;
-    }else{
-        return `Puntaje final ${final}. Gana computadora`;
-    }
-}
+

@@ -1,0 +1,15 @@
+body{
+background-image: url('https://www.univision.com/proxy/api/cached/picture?href=https%3A%2F%2Fuvn-brightspot.s3.amazonaws.com%2Fassets%2Fvixes%2Fbtg%2Ftech.batanga.com%2Ffiles%2FFondos-para-paginas-web-05.jpg&width=0&height=0&ratio_width=1240&ratio_height=698&format=webp');
+background-size: cover;
+
+
+
+}
+
+#msg1{
+    background-color: whitesmoke;
+}
+
+#msg2{
+    background-color: coral;
+}
