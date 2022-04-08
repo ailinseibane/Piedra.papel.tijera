@@ -35,15 +35,15 @@ final=0
 function click(e){
     if(e.target.id==='btn1'){
         var player='a'
-        msg.textContent=('Usted ha elegido la opción PIEDRA')
+        msg.textContent=('Jugador: PIEDRA')
         
     }else if (e.target.id==='btn2'){
         var player='b'
-        msg.textContent=('Usted ha elegido la opción PAPEL')
+        msg.textContent=('Jugador: PAPEL')
         
     }else if (e.target.id==='btn3'){
         var player='c'
-        msg.textContent=('Usted ha elegido la opción TIJERA')
+        msg.textContent=('Jugador: TIJERA')
         
     }else{}
 
@@ -69,17 +69,17 @@ function computerPlay(){
     var n=Math.random()
     if (n <(1/3)){
         var computer= 'a';       //'Piedra'
-        msg2.textContent=('Computadora ha elegido la opción PIEDRA')
+        msg2.textContent=('Computadora: PIEDRA')
         
         return computer
     }else if (n>=(1/3) && n<(2/3)){
         var computer = 'b';      //'Papel'
-        msg2.textContent=('Computadora ha elegido la opción PAPEL')
+        msg2.textContent=('Computadora: PAPEL')
         
         return computer
     }else{
         var computer= 'c';       //'Tijera'
-        msg2.textContent=('Computadora ha elegido la opción TIJERA')
+        msg2.textContent=('Computadora: TIJERA')
         
         return computer
     }

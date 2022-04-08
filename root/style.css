@@ -22,11 +22,27 @@ h1{
 }
 
 #msg1{
-    background-color: maroon;
+    color: maroon;
+    width: 40%;
+    margin: 1em auto;
+    font-size: 30px;
 }
 
 #msg2{
-    background-color: black;
+    color: black;
+    width: 40%;
+    margin: 1em auto;
+    font-size: 30px;
+    text-emphasis: bold;
+}
+
+#msg3{
+    color: maroon;
+    font-size: 40px;
+    text-decoration: double;
+    width: 40%;
+    margin: 1em auto;
+    font-family: 'Special Elite', cursive;
 }
 
 .container{
@@ -36,6 +52,10 @@ h1{
     width: 60%;
     margin: 0 auto;
     
+}
+
+.div{
+    text-align: center;
 }
 
 button{
