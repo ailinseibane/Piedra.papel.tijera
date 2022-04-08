@@ -2,23 +2,10 @@
 const div=document.querySelector('.div');
 console.log(div);
 
-const btn1=document.createElement('button');
-btn1.setAttribute('id','btn1')
-btn1.classList.add('btn');
-btn1.textContent='Piedra'
-div.appendChild(btn1);
+const btn1=document.querySelector('#btn1');
+const btn2=document.querySelector('#btn2');
+const btn3=document.querySelector('#btn3');
 
-const btn2=document.createElement('button');
-btn2.setAttribute('id','btn2')
-btn2.classList.add('btn');
-btn2.textContent='Papel'
-div.appendChild(btn2);
-
-const btn3=document.createElement('button');
-btn3.setAttribute('id','btn3')
-btn3.classList.add('btn');
-btn3.textContent='Tijera'
-div.appendChild(btn3);
 
 btn1.addEventListener('click',click);
 btn2.addEventListener('click',click);
@@ -39,21 +26,23 @@ msg3.setAttribute('id','msg3');
 div.appendChild(msg3);
 msg3.textContent=('')
 
-const msg4=document.querySelector('#msg4');
+const msg4=document.createElement('div');
+msg4.setAttribute('id','msg4');
+div.appendChild(msg4);
 msg4.textContent=('')
 
 final=0
 function click(e){
     if(e.target.id==='btn1'){
-        player='a'
+        var player='a'
         msg.textContent=('Usted ha elegido la opción PIEDRA')
         
     }else if (e.target.id==='btn2'){
-        player='b'
+        var player='b'
         msg.textContent=('Usted ha elegido la opción PAPEL')
         
     }else if (e.target.id==='btn3'){
-        player='c'
+        var player='c'
         msg.textContent=('Usted ha elegido la opción TIJERA')
         
     }else{}
