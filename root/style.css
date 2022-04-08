@@ -1,26 +1,32 @@
 body{
-background-image: url('https://www.univision.com/proxy/api/cached/picture?href=https%3A%2F%2Fuvn-brightspot.s3.amazonaws.com%2Fassets%2Fvixes%2Fbtg%2Ftech.batanga.com%2Ffiles%2FFondos-para-paginas-web-05.jpg&width=0&height=0&ratio_width=1240&ratio_height=698&format=webp');
+background-image: url('https://cafedesvelado.files.wordpress.com/2016/02/grey-background-7.jpg?w=1024&h=640');
 background-size: cover;
 font-family: 'Roboto Mono', monospace;
+color: white;
 }
 
 header{
     background-color: black;
     padding: 1em;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
 }
 
 h1{
     font-family: 'Special Elite', cursive;
-    text-align: center;
     color: white;
+    font-size: 40px;
+    animation: pulse;
+    animation-duration: 1s;
 }
 
 #msg1{
-    background-color: whitesmoke;
+    background-color: maroon;
 }
 
 #msg2{
-    background-color: coral;
+    background-color: black;
 }
 
 button{
@@ -28,11 +34,30 @@ button{
     color: white;
     background-color: black;
     font-size: 22px;
+    display: flex;
+    
+
+}
+
+button:hover{
+    background-color: maroon;
+    animation: pulse;
+    animation-duration: 1s;
+}
+
+h1:hover{
+    color: maroon;
+    
 }
 
 footer{
     background-color: grey;
     color: white;
+    position: absolute;
+    bottom: 0px;
+    margin: 0 auto;
+    width: 100%;
+    
 
     text-align: center;
 }
