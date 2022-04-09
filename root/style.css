@@ -87,3 +87,7 @@ footer{
 
     text-align: center;
 }
+
+i{
+    pointer-events: none;
+}
